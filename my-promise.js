@@ -4,7 +4,7 @@ function request(cb) {
     let delay = Math.round(Math.random() * 1000);
 
     setTimeout(function () {
-        cb(null, `msec delay: ${delay} - ok`);
+        cb(null, `ms delay: ${delay} - ok`);
     }, delay);
 }
 
