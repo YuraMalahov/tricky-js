@@ -5,6 +5,7 @@ class Fibonacci {
         this.end = end;
         this.value = 0;
         this.prev = 1;
+        this.i = 0;
     }
 
     [Symbol.iterator]() {
@@ -12,7 +13,7 @@ class Fibonacci {
     }
 
     next() {
-        if (this.value + this.prev > this.end) {
+        if (this.i++ >= this.end) {
             return {done: true};
         }
 
@@ -26,6 +27,6 @@ class Fibonacci {
     }
 }
 
-for (let num of new Fibonacci(20)) {
+for (let num of new Fibonacci(8)) {
     console.log(num);
 }
