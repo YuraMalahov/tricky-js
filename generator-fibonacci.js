@@ -2,9 +2,10 @@
 
 function * fibonacci (end) {
     let current = 0,
-        prev = 1;
+        prev = 1,
+        i = 0;
 
-    while (current + prev < end) {
+    while (i++ < end) {
         current = current + prev;
         prev = current - prev;
 
@@ -12,7 +13,7 @@ function * fibonacci (end) {
     }
 }
 
-let it = fibonacci(20),
+let it = fibonacci(8),
     result = it.next();
 
 while (!result.done) {
