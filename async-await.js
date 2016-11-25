@@ -6,7 +6,8 @@ async function test() {
     var a = await request(1000);
     console.log(a);
     
-    fetch().then((result) => console.log(result));
+    var b = await fetch();
+    console.log(b);
     
     console.log("end");
     
